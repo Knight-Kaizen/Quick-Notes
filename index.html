@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Quick Notes</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div class="toolbar">
+            <div class="pColor">
+                <div class="red color"></div>
+                <div class="blue color"></div>
+                <div class="yellow color"></div>
+                <div class="green color"></div>
+            </div>
+            <div class="actionBtn">
+                <div class="addBtn">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="removeBtn">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mainArea">
+           <!-- <div class="checkTicket ticket">
+            <div class="ticketColor ${ticketColor}"></div>
+            <div class="ticketId">#${ticketId}</div>
+            <div class="taskArea">${ticketTask}</div>
+            <div class="ticketLock">
+                <i class="fas fa-lock"></i>
+            </div>
+           </div> -->
+        </div>
+
+        <div class="newModal">
+            <textarea class="textArea" spellcheck="false"></textarea>
+            <div class="modalPriorityColor">
+                <div class="modalPrColor red"></div>
+                <div class="modalPrColor blue"></div>
+                <div class="modalPrColor yellow"></div>
+                <div class="modalPrColor green border"></div>
+            </div>
+            
+        </div>
+        <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+
+        <script src="script.js"></script>
+    </body>
+</html>
