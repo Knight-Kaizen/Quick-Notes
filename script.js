@@ -25,9 +25,12 @@ ticketColors.forEach((elem, indx) => {
 })
 
 let ticketsArr = [];
+
+let demoVis = false;
 appendDemo();
 function appendDemo() {
     if (ticketsArr.length == 0) {
+        demoVis = true;
         // console.log("empty!");
         let demo = document.createElement("div");
         demo.classList.add("demo");
@@ -44,9 +47,11 @@ function appendDemo() {
         `;
         mainArea.appendChild(demo);
     }
-    else {
+
+    if (demoVis && ticketsArr.length > 0) {
         let demo = document.querySelector(".demo");
         demo.remove();
+        demoVis = false;
     }
 }
 
