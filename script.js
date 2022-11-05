@@ -25,6 +25,30 @@ ticketColors.forEach((elem, indx)=>{
 })
 
 let ticketsArr =[];
+appendDemo();
+function appendDemo(){
+    if(ticketsArr.length == 0){
+        // console.log("empty!");
+        let demo = document.createElement("div");
+        demo.classList.add("demo");
+        demo.innerHTML = `
+        <h3>Get started!</h3>
+        - Create new notes using "<b>+</b>" button.
+        <br/>
+        - Group notes by using 4 different colors.
+        <br/>
+        - Remove them by "<b>x</b>" button.
+        <br/>
+        - Save your notes by "<b>Ctrl + x</b>".
+        <br/>     
+        `;
+        mainArea.appendChild(demo);
+    }
+    else{
+        let demo = document.querySelector(".demo");
+        demo.remove();
+    }
+}
 
 if(localStorage.getItem("my_tickets")){
     ticketsArr = JSON.parse(localStorage.getItem("my_tickets"));
@@ -76,7 +100,13 @@ addBtn.addEventListener("click", (e)=>{
 })
 removeBtn.addEventListener("click", (e)=>{
     removeFlg = !removeFlg;
-    console.log(removeFlg);
+    // console.log(removeFlg);
+    if(removeFlg){
+        removeBtn.classList.add("removeHoverClass");
+    }
+    else{
+        removeBtn.classList.remove("removeHoverClass");
+    }
 })
 
 newModal.addEventListener("keydown", (e)=> {
@@ -112,7 +142,7 @@ function createTicket(ticketColor, ticketTask, ticketId){
     handleRemove(newTicket, id);
     handleLock(newTicket, id);
     handleColor(newTicket, id);
-    
+    appendDemo();
 }
 function handleRemove(ticketToBeDel, id){
     ticketToBeDel.addEventListener("click", (e) => {
@@ -121,6 +151,7 @@ function handleRemove(ticketToBeDel, id){
             ticketsArr.splice(indx, 1);
             localStorage.setItem("my_tickets", JSON.stringify(ticketsArr));
             ticketToBeDel.remove();
+            appendDemo();
         }
     })
    
@@ -195,4 +226,5 @@ function setModalToDefault(){
         elem.classList.remove("border");
     })
     ticketColors[ticketColors.length-1].classList.add("border");
+    
 }
