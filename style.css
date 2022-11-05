@@ -1,21 +1,25 @@
-*{
-    box-sizing: border-box;  
+* {
+    box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
 }
-.toolbar{
+
+.toolbar {
     height: 5rem;
     background-color: #4b4b4b;
     display: flex;
     align-items: center;
 }
-.toolbar > *{
+
+.toolbar>* {
     margin-left: 4rem;
     border-radius: 2px;
 }
-.pColor{
+
+.pColor {
     height: 3.5rem;
     width: 16rem;
     background-color: #3d3d3d;
@@ -23,60 +27,70 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-.actionBtn{
+
+.actionBtn {
     height: 3.5rem;
     width: 8rem;
     background-color: #3d3d3d;
     display: flex;
 }
-    .actionBtn >*{
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        color: #d1d8e0;
-    }
-    .addBtn:hover{
-        background-color: #485460;
-    }
-    .removeBtn:hover{
-        background-color: #485460;
-    }
-.removeHoverClass{
+
+.actionBtn>* {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #d1d8e0;
+}
+
+.addBtn:hover {
     background-color: #485460;
 }
-   
-.color{
+
+.removeBtn:hover {
+    background-color: #485460;
+}
+
+.removeHoverClass {
+    background-color: #485460;
+}
+
+.color {
     height: 1.5rem;
     width: 2.5rem;
     background-color: lightblue;
     border-radius: 2px;
 }
-.red{
+
+.red {
     background-color: red;
 }
-.blue{
+
+.blue {
     background-color: blue;
 }
-.green{
+
+.green {
     background-color: green;
 }
-.yellow{
+
+.yellow {
     background-color: yellow;
 }
 
-.newModal{
+.newModal {
     height: 50vh;
     width: 45vw;
     background-color: aqua;
     position: absolute;
     top: calc(50% - 25vh);
     left: calc(50% - 22.5vw);
-    display: none; 
+    display: none;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-} 
-.textArea{
+}
+
+.textArea {
     height: 100%;
     width: 75%;
     border: none;
@@ -86,7 +100,8 @@ body{
     font-size: 1.5rem;
     padding: 2rem;
 }
-.modalPriorityColor{
+
+.modalPriorityColor {
     height: 100%;
     width: 25%;
     background-color: #3d3d3d;
@@ -95,37 +110,42 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-.modalPrColor{
+
+.modalPrColor {
     height: 10%;
     width: 60%;
     border-radius: 2px;
 }
 
-.border{
+.border {
     border: 5px solid #d1d8e0;
 }
 
-.ticket{
+.ticket {
     height: 14rem;
     width: 16rem;
     background-color: #f1f2f6;
 }
-.ticketColor{
+
+.ticketColor {
     height: 1rem;
     /* background-color: aquamarine; */
 }
-.ticketId{
+
+.ticketId {
     height: 2rem;
     /* background-color: antiquewhite; */
     padding: 0.4rem;
 }
-.taskArea{
+
+.taskArea {
     height: calc(100% - 3rem - 2rem);
     /* background-color: salmon; */
     padding: 0.4rem;
     outline: none;
 }
-.ticketLock{
+
+.ticketLock {
     height: 2rem;
     display: flex;
     justify-content: flex-end;
@@ -133,14 +153,16 @@ body{
     padding-right: .5rem;
     color: #a5b1c2;
 }
-.mainArea{
+
+.mainArea {
     display: flex;
     flex-wrap: wrap;
     padding: 2rem;
     gap: 1rem;
     justify-content: center;
 }
-.demo{
+
+.demo {
     height: 14rem;
     width: 20rem;
     background-color: #f1f2f6;
@@ -149,37 +171,41 @@ body{
     font-family: cursive;
 }
 
-@media  screen and (min-width: 321px) and (max-width: 768px) {
-    .newModal{
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .newModal {
         width: 60vw;
         left: calc((100vw - 60vw)/2);
     }
 }
+
 @media screen and(max-width: 321px) {
-    .newModal{
+    .newModal {
         width: 40vw;
         height: 35vh;
         top: calc((100vh - 40vh)/2);
         left: calc((100vw - 75vw)/2);
         flex-direction: column;
-        
-     }
-    .textArea{
+
+    }
+
+    .textArea {
         width: 15rem;
         height: 15rem;
     }
-    .modalPriorityColor{
+
+    .modalPriorityColor {
         flex-direction: row;
         width: 2rem;
         height: 100%;
     }
-    .modalPrColor{
+
+    .modalPrColor {
         width: 17%;
     }
-    .toolbar >*{
+
+    .toolbar>* {
         margin-left: 2rem;
         border-radius: 2px;
-    } 
-    
-}
+    }
 
+}
